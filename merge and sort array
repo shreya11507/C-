@@ -5,19 +5,19 @@ int main()
 int arr1[10],arr2[10],sort[20],m,n;
 cout<<"Enter number of elements of first array:";
 cin>>m;
-cout<<"\nEnter elements of first array:\n";
+cout<<"Enter elements of first array:\n";
 for(int i=0;i<m;i++)
 {
-cout<<"Enter element:";
+cout<<"Enter element:"<<endl;
 cin>>arr1[i];
 }
-cout<<"\nEnter number of elements of second array:\n";
+cout<<"Enter number of elements of second array:";
 cin>>n;
 int k=m+n;
-cout<<"\nEnter elements of second array:";
+cout<<"Enter elements of second array:\n";
 for(int i=0;i<n;i++)
 {
-cout<<"Enter element:";
+cout<<"Enter element:"<<endl;
 cin>>arr2[i];
 }
 for(int i=0;i<n;i++)
@@ -25,17 +25,17 @@ for(int i=0;i<n;i++)
 arr1[m]=arr2[i];
 m++;
 }
-cout<<"\nUnsorted array:";
+cout<<"Unsorted array:\n";
 for(int i=0;i<k;i++)
 {
     cout<<"\t"<<arr1[i];
 }
-cout<<"\nSorted array:";
+cout<<"\nSorted array:\n";
 for(int i=0;i<k;i++)
 {
-    for(int j=0;j<k;j++)
+    for(int j=i+1;j<k;j++)
     {
-        if(arr1[i]<=arr1[j])
+        if(arr1[i]>arr1[j])
         {
             int temp=arr1[i];
             arr1[i]=arr1[j];
