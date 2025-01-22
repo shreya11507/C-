@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+class book
+{
+    private:
+    string title;
+    string author;
+    int price;
+    public:
+    book()
+    {
+        title=" ";
+        author=" ";
+        price=0;
+    }
+    book(string btitle,string bauthor,int bprice)
+    {
+        title=btitle;
+        author=bauthor;
+        price=bprice;
+    }
+    void display(void)
+    {
+        cout<<"Book Title: "<<title<<endl;
+        cout<<"Book Author: "<<author<<endl;
+        cout<<"Price: "<<price<<endl;
+    }
+};
+int main()
+{
+    string title;
+    cout<<"Enter Book Title: "<<endl;
+    getline(cin,title);
+    string author;
+    cout<<"Enter Book Author: "<<endl;
+    getline(cin,author);
+    int price;
+    cout<<"Enter price: "<<endl;
+    cin>>price;
+    book b(title,author,price);
+    cout<<"\n";
+    cout<<"Book Details:"<<endl;
+    b.display();
+    return 0;
+}
