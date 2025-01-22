@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class person
+{private:
+    string name;
+    int age;
+    public:
+    void initialise(string pname,int page)
+    {
+        name=pname;
+        age=page;
+    }
+    void display(void)
+    {
+        cout<<"Name: "<<name<<endl;
+        cout<<"Age: "<<age<<endl;
+    }
+};
+int main()
+{
+    string name;
+    int age;
+    person p;
+    cout<<"Enter Name:"<<endl;
+    getline(cin,name);
+    cout<<"Enter age:";
+    cin>>age;
+    p.initialise(name,age);
+    cout<<"\n";
+    cout<<"Person Details:"<<endl;
+    p.display();
+    return 0;
+}
