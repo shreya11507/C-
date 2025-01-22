@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+class student
+{
+    private:
+    string name;
+    int rollno;
+    int mark;
+    public:
+    void setter(string sname,int srollno,int smark)
+    {
+        name=sname;
+        rollno=srollno;
+        mark=smark;
+    }
+    string getname()
+    {
+        return name;
+    }
+    int getrollno()
+    {
+        return rollno;
+    }
+    int getmark()
+    {
+        return mark;
+    }
+};
+int main()
+{
+    student s;
+    string name;
+    cout<<"Enter Student name: "<<endl;
+    getline(cin,name);
+    int rollno;
+    cout<<"Enter Student rollno:"<<endl;
+    cin>>rollno;
+    int mark;
+    cout<<"Enter mark: "<<endl;
+    cin>>mark;
+    cout<<endl;
+    s.setter(name,rollno,mark);
+    cout<<"Student Details:"<<endl;
+    cout<<"Student Name: "<<s.getname()<<endl;
+    cout<<"Student Rollno: "<<s.getrollno()<<endl;
+    cout<<"Student Mark: "<<s.getmark()<<endl;
+    return 0;
+}
